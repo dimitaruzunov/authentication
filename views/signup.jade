@@ -1,0 +1,8 @@
+form(id="signup", method="POST", action="/signup")
+  lable(for="username") User name
+  input#username(type="text", name="username")
+  lable(for="password") Password
+  input#password(type="text", name="password")
+  input(type="submit", value="Sign up")
+
+h1= message

@@ -1,0 +1,8 @@
+form(id="login", method="POST", action="/login")
+  lable(for="username") Username
+  input#username(type="text", name="username")
+  lable(for="password") Password
+  input#password(type="text", name="password")
+  input(type="submit", value="Log in")
+
+h1= message
