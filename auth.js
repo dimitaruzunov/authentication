@@ -6,7 +6,6 @@ exports.authenticate = function(username, password, usersList, callback) {
     if (user) {
       hash(password, user.salt, function(error, hash) {
         if (error) return callback(error);
-        console.log(hash, '\n', 'fasdfasdfasdfasdfasfasdf', '\n', user.hash.buffer.toString());
         if (hash.toString() == user.hash.buffer.toString()) return callback(null, user);
         callback(new Error('Invalid password'));
       });
